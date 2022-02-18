@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Deputy Project Leaders &#8212; Matplotlib Governance Documents 3367d48 documentation</title>
+    
+    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/style.css" />
+    
+    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="People" href="people.html" />
+    <link rel="prev" title="How Matplotlib will acknowledge financial support" href="sponsorship.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo2.svg" class="logo" alt="logo">
+</a>      
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        
+<ul id="navbar-main-elements" class="navbar-nav">
+  <li class="nav-item">
+    <a class="reference internal nav-link" href="plot_types/index.html">Plot types</a>
+  </li>
+  <li class="nav-item">
+    <a class="reference internal nav-link" href="gallery/index.html">Examples</a>
+  </li>
+  <li class="nav-item">
+    <a class="reference internal nav-link" href="tutorials/index.html">Tutorials</a>
+  </li>
+  <li class="nav-item">
+    <a class="reference internal nav-link" href="api/index.html">Reference</a>
+  </li>
+  <li class="nav-item">
+    <a class="reference internal nav-link" href="users/index.html">User guide</a>
+  </li>
+  <li class="nav-item">
+    <a class="reference internal nav-link" href="devel/index.html">Develop</a>
+  </li>
+  <li class="nav-item">
+    <a class="reference internal nav-link" href="users/release_notes.html">Release notes</a>
+  </li>
+</ul>
+
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        
+      <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://gitter.im/matplotlib" rel="noopener" target="_blank" title="gitter">
+            <span><i class="fab fa-gitter"></i></span>
+            <label class="sr-only">gitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://discourse.matplotlib.org" rel="noopener" target="_blank" title="discourse">
+            <span><i class="fab fa-discourse"></i></span>
+            <label class="sr-only">discourse</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/matplotlib/matplotlib" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/matplotlib/" rel="noopener" target="_blank" title="twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="governance.html">Main Governance Document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sponsorship.html">How Matplotlib will acknowledge financial support</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Deputy Project Leaders</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#release-manager-s">Release Manager(s)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-consistency-leader">API Consistency Leader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#principal-engineer">Principal Engineer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reference-documentation-leader">Reference Documentation Leader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#narrative-documentation-leader">Narrative Documentation Leader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#secretary">Secretary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#community-manager">Community Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funding.html">Funding</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communications_guidelines.html">Communication Guidelines</a></li>
+</ul>
+
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#release-manager-s">
+   Release Manager(s)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-consistency-leader">
+   API Consistency Leader
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principal-engineer">
+   Principal Engineer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-documentation-leader">
+   Reference Documentation Leader
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#narrative-documentation-leader">
+   Narrative Documentation Leader
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#secretary">
+   Secretary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#community-manager">
+   Community Manager
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="deputy-project-leaders">
+<h1>Deputy Project Leaders<a class="headerlink" href="#deputy-project-leaders" title="Permalink to this headline">¶</a></h1>
+<section id="release-manager-s">
+<h2>Release Manager(s)<a class="headerlink" href="#release-manager-s" title="Permalink to this headline">¶</a></h2>
+<p>The Release Manager (RM) is appointed for a minor version (A.B.x) release series
+of Matplotlib rather than for a fixed term.  They are responsible for the full
+release life cycle of all minor releases in the series including:</p>
+<ul class="simple">
+<li><p>ensuring the whats new, API changes, and release notes are up to date</p></li>
+<li><p>the timing of the releases</p></li>
+<li><p>what changes should or should not be backported from the master
+branch</p></li>
+<li><p>rebuilding and publishing the website</p></li>
+<li><p>publishing sdist and wheels to pypi</p></li>
+<li><p>notifying down-stream packagers of the release</p></li>
+<li><p>announcing the release (in coordination with the Community Manager)</p></li>
+</ul>
+<p>An individual may be the RM for more than one release series at the
+same time.</p>
+</section>
+<section id="api-consistency-leader">
+<h2>API Consistency Leader<a class="headerlink" href="#api-consistency-leader" title="Permalink to this headline">¶</a></h2>
+<p>Matplotlib is constantly making small changes to its API: enhancements
+that add new features, bug fixes that unavoidably change behavior, and
+deprecation of inconsistent or undesired functionality.  The API
+Consistency Leader (ACL) is responsible for making sure that these
+incremental changes to the library are done in a coherent and
+consistent manner.</p>
+<p>This include checking that:</p>
+<ul class="simple">
+<li><p>new functionality is not duplicating existing functionality</p></li>
+<li><p>deprecations are justified and properly documented</p></li>
+<li><p>new functionality does not “paint us into a corner” for future work</p></li>
+<li><p>new functionality is implemented with an API that is consistent with
+the existing functions</p></li>
+</ul>
+</section>
+<section id="principal-engineer">
+<h2>Principal Engineer<a class="headerlink" href="#principal-engineer" title="Permalink to this headline">¶</a></h2>
+<p>Matplotlib relies on a wide and deep code base to implement its public
+API; the low-level details need to be correct to faithfully implement
+that API.  In contrast to the API Consistency Leader, who is
+responsible for what the library does, the Principal Engineer is
+responsible for how. They are the point of contact for:</p>
+<ul class="simple">
+<li><p>rendering</p></li>
+<li><p>file formats</p></li>
+<li><p>text/font handling</p></li>
+<li><p>integration with GUI toolkits</p></li>
+<li><p>internal data structures and API</p></li>
+</ul>
+</section>
+<section id="reference-documentation-leader">
+<h2>Reference Documentation Leader<a class="headerlink" href="#reference-documentation-leader" title="Permalink to this headline">¶</a></h2>
+<p>The Matplotlib API reference documentation is split between the docstrings and
+the rst source.  This documentation needs to be complete and accurate as our
+users rely on it as the final authority of what a given method will do (short of
+reading the source).</p>
+<p>The Reference Documentation Leader (RDL) is responsible for ensuring that
+the docstrings are:</p>
+<ul class="simple">
+<li><p>correctly formatted and render as intended</p></li>
+<li><p>technically correct</p></li>
+<li><p>complete</p></li>
+</ul>
+<p>In addition to the docstrings the RDL is responsible for the sphinx build
+machinery and our sphinx extensions.</p>
+</section>
+<section id="narrative-documentation-leader">
+<h2>Narrative Documentation Leader<a class="headerlink" href="#narrative-documentation-leader" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the reference documentation, Matplotlib has narrative documentation.
+This documentation can take the form of short “cookbook” examples, longer tutorials,
+and prose documenting the how and why of the internals of the library.  This includes
+content that lives in both the main repository and  in other repositories
+in the Matplotlib organization.</p>
+<p>The Narrative Documentation Leader is responsible for shepherding all of this
+content including the scope, organization, level, tone, and voice.</p>
+</section>
+<section id="secretary">
+<h2>Secretary<a class="headerlink" href="#secretary" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Responsible for ensuring that there is an agenda for the weekly
+meeting at it is followed.</p></li>
+<li><p>Responsible for maintaining the weekly notes.</p></li>
+</ul>
+</section>
+<section id="community-manager">
+<h2>Community Manager<a class="headerlink" href="#community-manager" title="Permalink to this headline">¶</a></h2>
+<p>The true strength of Matplotlib and why it has had such longevity as a
+project is the community of people around the code.  That community
+needs to be maintained.  The Community Manager (CM) is a catch-all
+position for several very diverse tasks and this role may be split in
+the future and may want to enlist further assistants.  The CM is responsible
+for Matplotlib’s evangelism, outreach, and user support as well as mainitaining
+the venues for conversation with the community.</p>
+</section>
+</section>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Matplotlib Development Team.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
